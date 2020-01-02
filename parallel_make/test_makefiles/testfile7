@@ -1,0 +1,12 @@
+#don't run rules if they have dependency failures, but still run
+#all a rule's descendants even if one of them fails
+
+a: b c
+	echo "This should not display, since its dependency failed"
+b:
+	echo "This rule is going to fail, since 'asdf' does not exist"
+	cat asdf
+
+c:
+	echo "This rule should still execute since it has no failed"
+	echo "dependencies. Note that GNU make does not follow this behavior."

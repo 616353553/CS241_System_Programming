@@ -1,0 +1,21 @@
+#only run descendents of the goals and nothing more
+
+all: a
+	echo "all:" 
+	echo "This only depends on 'a', so by default, running parmake on"
+	echo "this Makefile should only print this and 'a'"
+	echo
+
+b: a
+	echo "b:"
+	echo "Because the 'all' rule does not depend on this rule, this"
+	echo "should print out only if you specifically include it in the goal"
+	echo "list."
+	echo
+
+a:
+	echo "a:"
+	echo "This should always print out because both 'all' and 'b' depend"
+	echo "upon 'a'"
+	echo
+

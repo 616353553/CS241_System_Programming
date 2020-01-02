@@ -1,0 +1,2 @@
+Note that the vertices in testfile10.png are sorted vertically based on
+execution time. So 'a1', 'a2', 'a3', 'a4' should execute in that order. And 'd' should execute after 'e' even though there's no dependency edge between them.

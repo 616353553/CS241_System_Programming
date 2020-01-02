@@ -1,0 +1,24 @@
+[e Stage]: We should both be the zeroeth to print!
+[e Stage]: We should both be the zeroeth to print!
+[e Stage]: Done with 'e'. Next comes 'd'!
+
+[d Stage]: I should be the first to print.
+
+[c Stage]: I should be the second to print.
+
+[b Stage]: I should run all at once after 'c'.
+[b Stage]: I should run all at once after 'c'.
+[b Stage]: I should run all at once after 'c'.
+
+[a Stage](#1): I should run after 'b' Stage starts but before
+               the 'b' Stage finishes.
+[a Stage](#2): I should run right after a(#1).
+[a Stage](#3): I should run right after a(#2).
+[a Stage](#4): I should run right after a(#3).
+
+[b Stage]: FINISHED. This should finish before the 'a' Stage
+           finishes but after a(#4) finishes.
+
+[a Stage]: FINISHED. This should be the second last to print out.
+
+Finished all. This should be the last to print out.

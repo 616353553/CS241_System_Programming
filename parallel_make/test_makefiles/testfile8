@@ -1,0 +1,21 @@
+all: a c
+	echo "This command should not run, since 'a' belongs to a dependency"
+	echo "cycle. 'e' should not run either unless you explicitly list it" 
+	echo "as a goal, since we must drop the 'all' rule altogether."
+
+a: b
+	echo "This command should not run, since it has a cycle dependency"
+
+b: c
+	echo "This command should not run, since it has a cycle dependency"
+
+c: d
+	echo "This command should not run, since it has a cycle dependency"
+
+d: a
+	echo "This command should not run, since it has a cycle dependency"
+
+e:
+	echo "This should only print out when your goals include"
+	echo "'e' explicitly."
+

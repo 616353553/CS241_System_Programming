@@ -1,0 +1,8 @@
+#make sure dependencies are satisifed before rules!
+
+a: b c
+	echo A
+b: c
+	echo B
+c:
+	echo C
